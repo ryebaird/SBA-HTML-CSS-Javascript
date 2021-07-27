@@ -20,7 +20,7 @@ function validateLogin()
             if (pwd.value == users[i]["password"])
             {
                 console.log("password matched!");
-                window.location.href = 'svg-graph.html';
+                window.location.href = 'games.html';
                 break;
             }
             else 
