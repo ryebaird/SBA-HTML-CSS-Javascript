@@ -12,7 +12,7 @@ It has the required 3 html pages:
  - account.html
  
 None of the functionality persists at the moment, due to no database connection, so any changes made will be lost on a refresh.
-------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
 
 Login.html 
 
@@ -23,7 +23,7 @@ Starting page which requires a username and password.  At the moment, they are h
   The login page will validate the user and password via the validateUser() function
   The login page compare the password to a regex pattern and report if it doesnt match the pattern used. This is a password hint field. 
   
- ------------------------------------------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------------------
  
  Games.html
  
@@ -50,7 +50,7 @@ Starting page which requires a username and password.  At the moment, they are h
  Each data point on the graph can be hovered over, and this will display the game details for that specific game in the game details division.
 (This element is where I chose to use a web font per the requirements)
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
 
 Account.html
 
