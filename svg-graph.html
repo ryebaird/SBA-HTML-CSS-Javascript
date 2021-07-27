@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre Baskerville">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #gameinfo{
+                font-family: 'Libre Baskerville', serif;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="container">
+                <div class ="row" height = "200"><div id = "navbargames" class = "col-3" >Game Details</div><div id = "navbaraccount" class = "col-6" ><a href="account.html">Account Details</a></div></div>
+                <div class = "row">
+                    <div id = "AddGameLabels" class = "col-6" style="text-align:left;padding:0;"><b>Enter game</b><br>
+                        <form id="form2">
+                        <label for = "gameNumber" >Game Number:</label><input id = "gameNumber" type="text" value = ""  readonly/><br>
+                        <label for = "gameScore">Game Score:</label><input id = "gameScore" type="text" value = ""/><br>
+                        <label for = "dateBowled">Date Bowled:</label><input id = "dateBowled" type="date"/><label id=""></label><br>
+                        <label for = "ballSelect">Select your Ball:</label>
+                        <select style = "margin-top: 5px;" id = "ballSelect">
+                            <option value = "Select the ball from the list">Select ball</option>
+                        </select><br>
+                        
+                        <label for = "locationSelect">Select your location:</label>
+                        <select style = "margin-top: 5px;" id = "locationSelect">
+                            <option value = "Select the ball from the list">Select Location</option>
+                        </select><br>
+                        <input onclick="addGame()" id = "submitGame" type="submit" value = "Add Game"/>
+                        </form>
+                    </div>
+              
+                    <div class = "col-6" script="text-align:center;" >Scroll through games<br><br><br><img src = "underconstruction.jfif" width = "100"></img></div>
+                </div>
+                
+
+
+                <div class = "row" height = "350">
+                    <div id = "gameinfo"   class = "col-4 d-block m-auto" style = "text-align: center;vertical-align: middle; " >Game Scores</div>
+                    <div class = "col-8" >
+                        <svg id = "graph"  viewbox = "0 0 550 400" width="400" >
+                            <!-- Simple rectangle -->
+                            <rect id = "linegraph " x="50" y="0" width="550" height="350" style="fill:rgb(216, 211, 211)"/>
+                            <line x1="50" y1="1" x2="50" y2="350" stroke="black"></line>
+                            <line x1="50" y1="350" x2="550" y2="350" stroke="black"></line>
+                            <line x1="50" y1="1" x2="550" y2="1" stroke=" rgb(133, 134, 133)" stroke-dasharray="4" />
+                            <line x1="50" y1="35" x2="550" y2="35" stroke=" rgb(133, 134, 133)" stroke-dasharray="4" />
+                            <line x1="50" y1="70" x2="550" y2="70" stroke=" rgb(133, 134, 133)" stroke-dasharray="4" />
+                            <line x1="50" y1="105" x2="550" y2="105" stroke=" rgb(133, 134, 133)" stroke-dasharray="4" />
+                            <line x1="50" y1="140" x2="550" y2="140" stroke=" rgb(133, 134, 133)" stroke-dasharray="4"/>
+                            <line x1="50" y1="175" x2="550" y2="175" stroke=" rgb(133, 134, 133)" stroke-dasharray="4"/>
+                            <line x1="50" y1="210" x2="550" y2="210" stroke=" rgb(133, 134, 133)" stroke-dasharray="4"/>
+                            <line x1="50" y1="245" x2="550" y2="245" stroke=" rgb(133, 134, 133)" stroke-dasharray="4"/>
+                            <line x1="50" y1="280" x2="550" y2="280" stroke=" rgb(133, 134, 133)" stroke-dasharray="4"/>
+                            <line x1="50" y1="315" x2="550" y2="315" stroke=" rgb(133, 134, 133)" stroke-dasharray="4"/>
+                            <line x1="50" y1="350" x2="550" y2="350"  stroke=" rgb(133, 134, 133)" />
+                            <text x="34" y="350" class="small">50</text>
+                            <text x="34" y="315" class="small">75</text>
+                            <text x="28" y="280" class="small">100</text>     
+                            <text x="28" y="245" class="small">125</text>
+                            <text x="28" y="210" class="small">150</text>
+                            <text x="28" y="175" class="small">175</text>
+                            <text x="28" y="140" class="small">200</text>
+                            <text x="28" y="105" class="small">225</text>
+                            <text x="28" y="70" class="small">250</text>
+                            <text x="28" y="35" class="small">275</text>
+                            <text x="28" y="10" class="small">300</text>
+                            <text text-anchor="middle" x="275" y="390" class="xaxis">Game Number</text>
+                            <text transform="rotate(270,15,175)" text-anchor="middle" x="15" y="175" class="yaxis">Game Score</text>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+            <script src="graph.js">
+            </script>
+    </body>
+</html>
