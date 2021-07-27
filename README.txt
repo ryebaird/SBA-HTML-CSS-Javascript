@@ -3,7 +3,8 @@
 This website is my submission for the SBA HTML/CSS/Javascript.
 
 I chose to create the start of my bowling tracker site, which will be used for my case study project.
-The page has been designed utilizing bootstrap to make the pages responsive. The majority of the layout is done using bootstrap columns.
+The page has been designed utilizing bootstrap to make the pages responsive. 
+The majority of the layout is done using bootstrap grid and columns.
 
 It has the required 3 html pages:
  - login.html
